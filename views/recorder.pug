@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 title
+
+
+  form(action = "/saveRecording", method = "POST")
+           div
+              label(for = "title") Title for your story:
+              input(name = "title" value = "Sample Story")
+           br
+
+           button(type = "submit", id="record", class="btn btn-danger") Record

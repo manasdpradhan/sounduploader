@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 title
+
+
+  form(action = "/saveRecording", method = "POST")
+           div
+              label(for = "Title") Title for your story:
+              input(name = "Title" value = "Sample Story")
+           br
+           div
+              label(for ="echo-cancellation") Enable echo cancellation:
+              input(id="echo-cancellation" type="checkbox")
+
+
+              label(for ="testtone") Test tone:
+              input(id="testtone" type="range" min="0" max="100" value="0")
+
+
+           div
+              label(for ="control-label") Test tone:
+
+           button(type = "submit", id="record", class="btn btn-danger") Record
+           button(type = "cancel", id="cancel", class="btn btn-default hidden") Cancel
